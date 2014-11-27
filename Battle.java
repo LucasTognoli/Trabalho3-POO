@@ -2,9 +2,7 @@ public class Battle extends Thread{
 	
 	private Character character;
 	private Creature against1, against2;
-	public Counter count1, count2, count3; //contadores de vitórias do TeamA, TeamB e de empates
-	
-	// Tentar receber apenas cópias, para evitar que os Teams sejam mudados.
+
 	public Battle(String str, Character character, Creature against1, Creature against2){
 		super(str);
 		this.character = character;

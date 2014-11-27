@@ -24,6 +24,12 @@ public class RPG{
 		Witchs cr7 = new Witchs("Warlock",Element.air);
 		Humanoids cr8 = new Humanoids("Assassin",Element.physical);
 		Humanoids cr9 = new Humanoids("Hero",Element.physical);
+		Demons cr10 = new Demons("Hakuna",Element.earth);
+		Demons cr11 = new Demons("Matata",Element.fire);
+		Witchs cr12 = new Witchs("Ehlindo",Element.fire);
+		Witchs cr13 = new Witchs("Dizer",Element.air);
+		Humanoids cr14 = new Humanoids("Voce",Element.physical);
+		Humanoids cr15 = new Humanoids("Vai",Element.physical);
 
 
 		Team t0 = new Team("Alfa",Color.red);
@@ -110,8 +116,46 @@ public class RPG{
 		t1.addChar(ch6);
 		t1.addChar(ch7);	
 
+//************** RODADA EM QUE OS CHARACTERS MATAM CRIATURAR PARA UPAR *******//
 
-//************** RODADE DE ATTACKS E RESOLVEBATTLE **************************//
+		Battle b1 = new Battle("Thread1", ch0, cr0, cr1);
+		Battle b2 = new Battle("Thread2", ch1, cr2, cr3);
+		Battle b3 = new Battle("Thread3", ch2, cr4, cr5);
+		Battle b4 = new Battle("Thread4", ch3, cr6, cr7);
+		Battle b5 = new Battle("Thread5", ch4, cr8, cr9);
+		Battle b6 = new Battle("Thread6", ch5, cr10, cr11);
+		Battle b7 = new Battle("Thread7", ch6, cr12, cr13);
+		Battle b8 = new Battle("Thread8", ch7, cr14, cr15);
+
+		b1.setPriority(Thread.NORM_PRIORITY);
+		b2.setPriority(Thread.NORM_PRIORITY);
+		b3.setPriority(Thread.NORM_PRIORITY);
+		b4.setPriority(Thread.NORM_PRIORITY);
+		b5.setPriority(Thread.NORM_PRIORITY);
+		b6.setPriority(Thread.NORM_PRIORITY);
+		b7.setPriority(Thread.NORM_PRIORITY);
+		b8.setPriority(Thread.NORM_PRIORITY);
+
+		b1.start();
+		b2.start();
+		b3.start();
+		b4.start();
+		b5.start();
+		b6.start();
+		b7.start();
+		b8.start();
+		
+		b1.join();
+		b2.join();
+		b3.join();
+		b4.join();
+		b5.join();
+		b6.join();
+		b7.join();
+		b8.join();
+
+
+//************** RODADA DE ATTACKS E RESOLVEBATTLE **************************//
 
 
 		ch0.attack(ch4);
