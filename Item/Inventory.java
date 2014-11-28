@@ -72,6 +72,23 @@ public class Inventory{
 		}
 		return;
 	}
+	public void unequipItem(Item item){
+		for(int i = 0 ; i < pair.size() ; i++){
+			if(pair.get(i).getItem().equals(item)){
+				pair.get(i).setBool(false);
+				return;
+			}
+		}
+		return;
+	}
+	public Boolean isEquiped(Item item){
+		for(int i = 0 ; i < pair.size() ; i++){
+			if(pair.get(i).getItem().equals(item)){
+				return pair.get(i).getBool();
+			}
+		}
+		return null;
+	}
 	public void removeItem(String name){	//Retira um item do inventario a partir do nome
 		for (int i = 0 ; i < pair.size() ; i++){
 			if(pair.get(i).getItem().getName().equals(name)){

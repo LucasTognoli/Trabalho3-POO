@@ -4,12 +4,10 @@ public abstract class Item{
 
 	private String name;
 	private double price;
-	private boolean iseq;
 //*************** CONSTRUTOR ********************************************//
 
 	public Item(String name,double price){	//Construtor
 		this.name = name;
-		this.iseq = false;
 		if (price > 0 )	//Evita preços negativos
 			this.price = price;
 		else
@@ -31,11 +29,5 @@ public abstract class Item{
 	public abstract int getDefensePts();	//Metodo virtual
 
 //***************** METODOS AUXILIARES **********************************//
-	public boolean isEquiped(){	//Retorna se o item esta ou nao equipado
-		return this.iseq;
-	}
 	public abstract int use();	//Metodo virtual
-	public void setIseq(boolean bool){
-		this.iseq = bool;
-	}
 }
