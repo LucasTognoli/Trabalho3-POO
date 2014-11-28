@@ -11,8 +11,7 @@ public class Paladin extends Character{
 		double dp=0;
 		double xp=0;
 		for(int i = 0 ; i < this.getInventory().getNItems() ; i++){
-			Item aux = this.getInventory().searchItem(i);
-			if ( this.getInventory().isEquiped(aux) == true)	//Somente items equipados sao considerados
+			if (this.getInventory().searchItem(i).isEquiped() == true)	//Somente items equipados sao considerados
 				dp += this.getInventory().searchItem(i).getDefensePts();
 		}
 		xp = (double)(this.XP/6);
@@ -23,8 +22,7 @@ public class Paladin extends Character{
 		double ap=0;
 		double xp=0;
 		for(int i = 0 ; i < this.getInventory().getNItems() ; i++){
-			Item aux = this.getInventory().searchItem(i);
-			if ( this.getInventory().isEquiped(aux) == true)	//Somente items equipados sao considerados
+			if (this.getInventory().searchItem(i).isEquiped() == true)	//Somente items equipados sao considerados
 				ap += this.getInventory().searchItem(i).getAttackPts();
 		}
 		xp = (double)(this.XP/2);

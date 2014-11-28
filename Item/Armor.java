@@ -23,7 +23,8 @@ public class Armor extends Item{
 	public double getWeight(){
 		return weight;
 	}
-	public int use(){
+	public int use(){	//Este metodo equipa a armadura no character
+		this.setIseq(true);
 		return 0;
 	}
 }

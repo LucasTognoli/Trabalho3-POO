@@ -23,7 +23,8 @@ public class Weapon extends Item{
 	public double getRange(){
 		return this.range;
 	}
-	public int use(){
+	public int use(){	//Equipa a arma.
+		this.setIseq(true);
 		return 0;
 	}
 }

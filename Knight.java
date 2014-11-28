@@ -11,8 +11,7 @@ public class Knight extends Character{
 		double dp=0;
 		double xp=0;
 		for(int i = 0 ; i < this.getInventory().getNItems() ; i++){
-			Item aux = this.getInventory().searchItem(i);
-			if ( this.getInventory().isEquiped(aux) == true)
+			if (this.getInventory().searchItem(i).isEquiped() == true)
 				dp += this.getInventory().searchItem(i).getDefensePts();
 		}
 		xp = (double)(this.XP/6);
@@ -23,8 +22,7 @@ public class Knight extends Character{
 		double ap=0;
 		double xp=0;
 		for(int i = 0 ; i < this.getInventory().getNItems() ; i++){
-			Item aux = this.getInventory().searchItem(i);
-			if ( this.getInventory().isEquiped(aux) == true)
+			if (this.getInventory().searchItem(i).isEquiped() == true)
 				ap += this.getInventory().searchItem(i).getAttackPts();
 		}
 		xp = (double)(this.XP/2);
