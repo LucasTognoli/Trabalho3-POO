@@ -9,9 +9,9 @@ public class RPG{
 		Knight ch1 = new Knight("ch1",5);
 		Paladin ch2 = new Paladin("ch2",5);
 		Paladin ch3 = new Paladin("ch3",5);
-		Druid ch4 = new Druid("ch4",5);
-		Sorcerer ch5 = new Sorcerer("ch5",5);
-		Sorcerer ch6 = new Sorcerer("ch6",5);
+		Druid ch4 = new Druid("ch4",20);
+		Sorcerer ch5 = new Sorcerer("ch5",13);
+		Sorcerer ch6 = new Sorcerer("ch6",13);
 		Paladin ch7 = new Paladin("ch7",5);
 
 		Dragons cr0 = new Dragons("Frost Dragon",Element.water);
@@ -145,14 +145,20 @@ public class RPG{
 		b7.start();
 		b8.start();
 		
-		b1.join();
-		b2.join();
-		b3.join();
-		b4.join();
-		b5.join();
-		b6.join();
-		b7.join();
-		b8.join();
+		try {
+			b1.join();
+			b2.join();
+			b3.join();
+			b4.join();
+			b5.join();
+			b6.join();
+			b7.join();
+			b8.join();
+		}
+		catch(InterruptedException e) {}
+
+
+		
 
 
 //************** RODADA DE ATTACKS E RESOLVEBATTLE **************************//

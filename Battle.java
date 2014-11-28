@@ -14,7 +14,6 @@ public class Battle extends Thread{
 	public void run(){
 		
 		int num_attacks = 0;
-
 		while(against1.getHP() > 0){
 			character.attack(against1);
 			num_attacks++;
@@ -27,5 +26,6 @@ public class Battle extends Thread{
 			num_attacks++;
 		}
 		character.addXP(num_attacks * 2);
+		System.out.println("FIM DE UMA THREAD");
 	}
 }

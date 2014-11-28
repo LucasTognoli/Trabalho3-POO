@@ -10,8 +10,11 @@ public abstract class Individual{
 		this.MP = 100;
 	}
 	public void addHP(int hp){
-		if (this.HP + hp > 1000)
-			this.HP = 1000;
+		if (this.HP + hp > 100)
+			this.HP = 100;
+		if (this.HP + hp < 0){
+			this.HP = 0;
+		}
 		else
 			this.HP += hp; 
 
