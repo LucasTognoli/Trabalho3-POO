@@ -21,6 +21,4 @@ um Character e uma Creature podem ser mágicos, a escolha de projeto foi impleme
 - Nova enumeração criada, Element, que pontua os tipos de magia, usados para implementar Spells.
 
 - Implementada a classe Pair, que simula a mesma classe Pair do C++, possibilitando que um objeto possua refeẽncia para
-dois outros objetos. Nessa clase foi utilizado o conceito de programação genérica, conforme solicitado na especficação do
-trabalho.
- 
+dois outros objetos. Nessa clase foi utilizado o conceito de programação genérica, conforme solicitado na espec 
