@@ -25,10 +25,6 @@ public class Druid extends Character implements Spells{
 
 	public void attack(Character ch){
 		double rand = Math.random(); 			//Missing Chance (de 0 a 0.9999999)
-		if (this.MP < 5){
-			return;
-		}
-		this.addMP(-5);
 		if(rand < 0.15){
 			ch.addHP(-(this.FireStrike()));
 			return;
@@ -49,12 +45,7 @@ public class Druid extends Character implements Spells{
 
 	public void attack(Creature cr){
 		double rand = Math.random(); 			//Missing Chance (de 0 a 0.9999999)
-		if (this.MP < 5){
-			return;
-		}
-		this.addMP(-5);
 		if(rand < 0.25){
-			System.out.println("FireStrike");
 			if (cr.getElement() == Element.fire){
 				return;
 			}
@@ -62,7 +53,6 @@ public class Druid extends Character implements Spells{
 			return;
 		}
 		if(rand < 0.50){
-			System.out.println("WaterStrike");
 			if (cr.getElement() == Element.water){
 				return;
 			}
@@ -70,7 +60,6 @@ public class Druid extends Character implements Spells{
 			return;
 		}
 		if(rand < 0.75){
-			System.out.println("EarthStrike");
 			if (cr.getElement() == Element.earth){
 				return;
 			}
@@ -78,7 +67,6 @@ public class Druid extends Character implements Spells{
 			return;
 		}
 		if (rand < 1){
-			System.out.println("AirStrike");
 			if (cr.getElement() == Element.air){
 				return;
 			}
