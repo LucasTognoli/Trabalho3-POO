@@ -37,6 +37,7 @@ public abstract class Character extends Individual{
 //************** METODOS COMPLEMENTARES *********************************//
 	public abstract void attack(Creature cr);
 
+	// mostra todo inventário do personagem
 	public void showInventory(){
 		System.out.println("CHARACTER:" + name);
 		System.out.println("INVENTORY:");

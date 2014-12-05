@@ -1,3 +1,10 @@
+/*
+Classe que implementa a Thread de "XP increasing". Recebe como parâmetros uma String (nome da Thread),
+um Character e duas Creaures.
+Na execução da thread, o personagem ataca cada criatura até matá-la. Então, seu XP é aumentado
+proporcionalmente (numero de ataques * 2) ao número de ataques necessários.
+*/
+
 public class Battle extends Thread{
 	
 	private Character character;

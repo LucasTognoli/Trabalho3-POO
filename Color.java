@@ -1,3 +1,7 @@
+/*
+Enumeração usada para definir cores para os times.
+*/
+
 public enum Color {
 	
 	blue(0,0,255),

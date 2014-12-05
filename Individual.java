@@ -1,3 +1,9 @@
+/*
+Classe base para todos os personagens do jogo (Characters e Creatures).
+Implementa características presentes em todos os personagens, como MP, HP e nome,
+além de seus getters.
+*/
+
 public abstract class Individual{
 
 	protected String name;

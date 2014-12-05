@@ -1,3 +1,8 @@
+/*
+Enumeração usada em Spells. Cada criatura mágica é composta por um elemento, e lança ataques
+relacionados a ele.
+*/
+
 public enum Element {
 	
 	air("Air"),

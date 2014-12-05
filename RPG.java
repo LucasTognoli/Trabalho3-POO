@@ -1,10 +1,23 @@
+/*
+Classe principal do jogo, que tem o papel de instanciar todos os personagens, criaturas ítens que
+serão utilizados.
+- O jogo será composto por 2 times de 4 personagens cada;
+- Serão criadas algumas criaturas, que são usadas no processo de "XP increasing" de cada Character;
+- O "XP increasing" consiste em cada Character atacar duas criaturas até matá-las, ganhando XP proporcional
+ao número de ataques que levou para matar;
+- Cada Character roda seu "XP Increasing" de forma concorrente aos outros Characters, ou seja, todo o processo
+é feito por meio de Threads;
+- Depois de aumentar o XP, os personagens realizam batalhas, exatamente como feito no Trabalho 2.
+*/
+
+
 import Item.*;
 
 public class RPG{
 	public static void main (String[]args){
 
 //************** INSTANCIANDO OS OBJETOS *********************************//
-	
+		// Characters
 		Paladin ch0 = new Paladin("ch0",5);
 		Knight ch1 = new Knight("ch1",5);
 		Paladin ch2 = new Paladin("ch2",5);
@@ -14,6 +27,7 @@ public class RPG{
 		Sorcerer ch6 = new Sorcerer("ch6",13);
 		Paladin ch7 = new Paladin("ch7",5);
 
+		// Creatures
 		Dragons cr0 = new Dragons("Frost Dragon",Element.water);
 		Dragons cr1 = new Dragons("Dragon Lord",Element.fire);
 		Dragons cr2 = new Dragons("Undead Dragon",Element.physical);
@@ -31,10 +45,11 @@ public class RPG{
 		Humanoids cr14 = new Humanoids("Voce",Element.physical);
 		Humanoids cr15 = new Humanoids("Vai",Element.physical);
 
-
+		//Teams
 		Team t0 = new Team("Alfa",Color.red);
 		Team t1 = new Team("Beta",Color.blue);
 
+		//Items
 		Item itemA0 = new Armor("Magic Plate Armor",99.9,25,20);
 		Item itemA1 = new Armor("Demon Armor",99.9,25,20);
 		Item itemA2 = new Armor("Dragon Scale Mail",99.9,25,20);
@@ -116,7 +131,7 @@ public class RPG{
 		t1.addChar(ch6);
 		t1.addChar(ch7);	
 
-//************** RODADA EM QUE OS CHARACTERS MATAM CRIATURAR PARA UPAR *******//
+//************** RODADA EM QUE OS CHARACTERS MATAM CRIATURAR PARA UPAR ***************//
 
 		Battle b1 = new Battle("Thread1", ch0, cr0, cr1);
 		Battle b2 = new Battle("Thread2", ch1, cr2, cr3);
@@ -136,6 +151,7 @@ public class RPG{
 		b7.setPriority(Thread.NORM_PRIORITY);
 		b8.setPriority(Thread.NORM_PRIORITY);
 
+		//inicia as Threads
 		b1.start();
 		b2.start();
 		b3.start();
@@ -145,6 +161,9 @@ public class RPG{
 		b7.start();
 		b8.start();
 		
+	/*  Bloco Try-Catch que controla o processo de join, que força o programa a esperar
+		o termino de cada Thread para continuar.
+	*/
 		try {
 			b1.join();
 			b2.join();
