@@ -1,3 +1,7 @@
+/*
+As criaturas do tipo Dragão são hybridas e portanto podem atacar tanto fisicamente como por Spells.
+*/
+
 public class Dragons extends Creature implements Spells{
 	
 	protected int power;
@@ -37,8 +41,8 @@ public class Dragons extends Creature implements Spells{
 		if (this.element.getName() == "water"){
 			ch.addHP(-(this.WaterStrike()));
 		}
-		if (this.element.getName() == "physical"){
-			ch.addHP(-(int)(power*0.5));
+		if (this.element.getName() == "physical"){	//Ataque fisico
+			ch.addHP(-(int)(power*0.5));	//Usando power para o calculo do ataque fisico.
 		}
 	}
 	

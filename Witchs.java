@@ -1,3 +1,8 @@
+/*
+As criaturas do tipo bruxas possuem ataque somente por magias, portanto sua variável
+para o controle do dano é wisdom.
+*/
+
 public class Witchs extends Creature implements Spells{
 	
 	protected int wisdom;

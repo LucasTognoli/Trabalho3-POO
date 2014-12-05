@@ -1,3 +1,7 @@
+/*
+Criaturas do tipo humanoides atacam fisicamente usando a variavel power.
+*/
+
 public class Humanoids extends Creature{
 	
 	protected int power;

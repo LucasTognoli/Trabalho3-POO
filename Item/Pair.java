@@ -1,3 +1,10 @@
+/*
+Aqui é feito a programação genérica exigida no trabalho. A classe pair é usada no ArrayList
+dentro de inventario para criar um array de Items e de Bool.
+Dentro da classe Pair os metodos e os atributos são genéricos e portanto aceitam instancias de qualquer 
+tipo de variável. Somente na classe Inventory que o T e o B são definidos como Item e Bool.
+*/
+
 package Item;
 
 public class Pair <T,B> {

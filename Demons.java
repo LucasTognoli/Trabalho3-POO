@@ -1,3 +1,7 @@
+/*
+Classe de criaturas do tipo demônio. São do tipo magicas.
+*/
+
 public class Demons extends Creature implements Spells{
 	
 	protected int wisdom;

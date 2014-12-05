@@ -1,3 +1,7 @@
+/*
+Classe Sorcer tem mais dano em magias que a Druid.
+O getAttackPoints retorna 0 pois nao tem como o Sorcer atacar fisicamente.
+*/
 import Item.*;
 
 public class Sorcerer extends Character implements Spells{
@@ -18,11 +22,11 @@ public class Sorcerer extends Character implements Spells{
 		dp = ((this.constitution*.6 + this.dexterity*.1 + this.speed*.3) + dp)*xp;
 		return (int)dp + (wisdom/2);
 	}
-	protected int getAttackPoints(){	//Retorna os pontos de attack considerando items e atributos
+	protected int getAttackPoints(){
 		return 0;
 	}
 	public void attack(Character ch){
-		double rand = Math.random(); 			//Missing Chance (de 0 a 0.9999999)
+		double rand = Math.random(); 			//Chance realcionada as magias (de 0 a 0.9999999)
 		if(rand < 0.15){
 			ch.addHP(-(this.FireStrike()));
 			return;
@@ -41,7 +45,7 @@ public class Sorcerer extends Character implements Spells{
 		}
 	}
 	public void attack(Creature cr){
-		double rand = Math.random(); 			//Missing Chance (de 0 a 0.9999999)
+		double rand = Math.random(); 			//Chance realcionada as magias (de 0 a 0.9999999)
 		if(rand < 0.25){
 			if (cr.getElement() == Element.fire){
 				return;

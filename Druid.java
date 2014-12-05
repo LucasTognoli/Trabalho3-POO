@@ -1,3 +1,8 @@
+/*
+Personagem Druid ataca creaturas e personagens com magias, e sua cura é melhor do que a do Sorcer.
+Para usar as magias temos que implementar a interface Spells.
+Como não temos attack fisico o getAttackPoints retorna 0.
+*/
 import Item.*;
 
 public class Druid extends Character implements Spells{
@@ -18,12 +23,12 @@ public class Druid extends Character implements Spells{
 		dp = ((this.constitution*.6 + this.dexterity*.1 + this.speed*.3) + dp)*xp;
 		return (int)dp + (wisdom);
 	}
-	protected int getAttackPoints(){	//Retorna os pontos de attack considerando items e atributos
+	protected int getAttackPoints(){
 		return 0;
 	}
 
 	public void attack(Character ch){
-		double rand = Math.random(); 			//Missing Chance (de 0 a 0.9999999)
+		double rand = Math.random(); 			//Chance realcionada as magias (de 0 a 0.9999999)
 		if(rand < 0.15){
 			ch.addHP(-(this.FireStrike()));
 			return;
@@ -43,7 +48,7 @@ public class Druid extends Character implements Spells{
 	}
 
 	public void attack(Creature cr){
-		double rand = Math.random(); 			//Missing Chance (de 0 a 0.9999999)
+		double rand = Math.random(); 			//Chance realcionada as magias (de 0 a 0.9999999)
 		if(rand < 0.25){
 			if (cr.getElement() == Element.fire){
 				return;

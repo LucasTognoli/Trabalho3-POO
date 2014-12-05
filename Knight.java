@@ -1,3 +1,7 @@
+/*
+A variavel power é somada no ataque do Knight. Deixando seu ataque mais forte que o do Paladino
+*/
+
 import Item.*;
 
 public class Knight extends Character{
@@ -30,7 +34,7 @@ public class Knight extends Character{
 		return (int)ap;
 	}
 	public void attack(Character ch){
-		double rand = Math.random(); 			//Missing Chance (de 0 a 0.9999999)
+		double rand = Math.random(); 			//Chance (de 0 a 0.9999999)
 		int dmg = (int)(Math.random()*11 - 5); 		//Variavel para calcular dano (de -5 a 5)
 
 		if (rand < (0.1)/this.XP ){ 			//Miss.
