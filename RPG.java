@@ -18,14 +18,14 @@ public class RPG{
 
 //************** INSTANCIANDO OS OBJETOS *********************************//
 		// Characters
-		Paladin ch0 = new Paladin("ch0",5);
-		Knight ch1 = new Knight("ch1",5);
-		Paladin ch2 = new Paladin("ch2",5);
-		Paladin ch3 = new Paladin("ch3",5);
-		Druid ch4 = new Druid("ch4",20);
-		Sorcerer ch5 = new Sorcerer("ch5",13);
-		Sorcerer ch6 = new Sorcerer("ch6",13);
-		Paladin ch7 = new Paladin("ch7",5);
+		Paladin ch0 = new Paladin("Paladino1",5);
+		Knight ch1 = new Knight("Cavaleiro1",5);
+		Paladin ch2 = new Paladin("Paladino2",5);
+		Paladin ch3 = new Paladin("Paladino3",5);
+		Druid ch4 = new Druid("Druida",20);
+		Sorcerer ch5 = new Sorcerer("Feiticeiro1",13);
+		Sorcerer ch6 = new Sorcerer("Feiticeiro2",13);
+		Paladin ch7 = new Paladin("Paladino4",5);
 
 		// Creatures
 		Dragons cr0 = new Dragons("Frost Dragon",Element.water);
@@ -197,8 +197,10 @@ public class RPG{
 		t0.resolveBattle(t1);
 		t1.resolveBattle(t0);
 
-		//System.out.println(t0.getResults());
-		//System.out.println(t1.getResults());
+		System.out.println("\n\nProcessando rodada de batalhas...");
+
+		System.out.println("\n\nPlacar ao fim de uma batalha - Time1: " + t0.getResults());
+		System.out.println("Placar ao fim de uma batalha - Time2: " + t1.getResults());
 
 	}
 

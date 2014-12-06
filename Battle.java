@@ -26,6 +26,7 @@ public class Battle extends Thread{
 			num_attacks++;
 		}
 		character.addXP(num_attacks * 2);
+		System.out.println(character.getName() + " ganhou " + (num_attacks *2) + " de XP!");
 
 		num_attacks = 0;
 		while(against2.getHP() > 0){
@@ -33,6 +34,7 @@ public class Battle extends Thread{
 			num_attacks++;
 		}
 		character.addXP(num_attacks * 2);
+		System.out.println(character.getName() + " ganhou " + (num_attacks *2) + " de XP!");
 		System.out.println("FIM DE UMA THREAD");
 	}
 }
